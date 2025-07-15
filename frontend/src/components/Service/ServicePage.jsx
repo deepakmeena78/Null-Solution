@@ -316,7 +316,7 @@ const ServicePage = () => {
   }, [servicesData, categoryParam]);
 
   return (
-    <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white transition-colors duration-300 min-h-screen">
+    <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white min-h-screen">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
           Our Services
@@ -345,31 +345,23 @@ const ServicePage = () => {
             filteredData.map((service, index) => (
               <div
                 key={index}
-                className="group relative text-white rounded-2xl p-6 shadow-md transition-all duration-300 cursor-pointer bg-gradient-to-r from-[#c31432] via-[#240b36] to-[#0f0c29]"
+                className="group relative text-gray-800 dark:text-gray-100 rounded-2xl p-6 shadow-lg bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
               >
                 {/* Hover Popup */}
                 <div className="absolute top-2 right-2 bg-white text-black text-xs font-semibold px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
                   {service.category}
                 </div>
 
-                <div className="flex justify-center mb-4">
-                  <img
-                    src={service.icon}
-                    alt={service.title}
-                    className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-
-                <h3 className="text-lg font-semibold text-center group-hover:text-white transition">
+                <h3 className="text-lg font-semibold text-center group-hover:text-pink-700 transition">
                   {service.title}
                 </h3>
-                <p className="text-sm text-center text-gray-200 mt-2 group-hover:text-white transition">
+                <p className="text-sm text-center text-gray-600 dark:text-gray-300 mt-2 group-hover:text-pink-800 dark:group-hover:text-pink-200 transition">
                   {service.description}
                 </p>
                 <div className="text-center mt-4">
                   <a
                     href="#"
-                    className="text-sm font-semibold text-white hover:underline flex justify-center items-center gap-1 group-hover:text-white transition"
+                    className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex justify-center items-center gap-1 group-hover:text-pink-800 dark:group-hover:text-pink-300 transition"
                   >
                     Learn More <span className="text-lg">›</span>
                   </a>

@@ -1,89 +1,47 @@
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles"; // ✅ correct import for loadFull
-
+import Tilt from "react-parallax-tilt";
 
 const IntroPage = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white">
-      {/* Particle Background */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        className="absolute inset-0 -z-10"
-        options={{
-          fullScreen: { enable: false },
-          background: { color: { value: "#000000" } },
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onHover: {
-                enable: true,
-                mode: "repulse", // push away on hover
-              },
-              onClick: {
-                enable: true,
-                mode: "push", // add particles on click
-              },
-              resize: true,
-            },
-            modes: {
-              repulse: {
-                distance: 100,
-                duration: 0.4,
-              },
-              push: {
-                quantity: 4,
-              },
-            },
-          },
-          particles: {
-            number: {
-              value: 80,
-              density: { enable: true, area: 800 },
-            },
-            color: { value: "#ffffff" },
-            shape: { type: "circle" },
-            opacity: {
-              value: 0.5,
-              random: true,
-            },
-            size: {
-              value: 2,
-              random: true,
-            },
-            move: {
-              enable: true,
-              speed: 1.2,
-              direction: "none",
-              outModes: "out",
-            },
-            links: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.3,
-              width: 1,
-            },
-          },
-          detectRetina: true,
-        }}
-      />
+    <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        {/* Text Content */}
+        <div>
+          <h1 className="text-4xl font-bold text-[var(--dark-theme)] dark:text-[var(--dark-theme)] mb-4">
+            Welcome to Our Digital World!
+          </h1>
+          {/* <p className="text-lg text-black dark:text-black mb-6">
+            We are passionate about creating innovative software solutions and delivering top-notch digital experiences. Let's build the future together!
+          </p> */}
+          <p className="text-lg font-normal text-black dark:text-black mb-6">
+  We are passionate about creating innovative software solutions and delivering top-notch digital experiences. Let's build the future together!
+</p>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Instoweb</h1>
-        <p className="text-lg max-w-xl text-white/80">
-          We create scalable CRM/ERP systems with smooth, modern UI experiences.
-        </p>
-        <button className="mt-8 px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-full font-semibold transition">
-          Get Started
-        </button>
+          <a
+            href="#services"
+            className="inline-block bg-[var(--dark-theme)] text-white px-6 py-3 rounded-full font-medium hover:bg-pink-700 transition"
+          >
+            Explore Services
+          </a>
+        </div>
+
+        {/* Image with Mouse Effect */}
+        <Tilt
+          tiltMaxAngleX={20}
+          tiltMaxAngleY={20}
+          perspective={1000}
+          scale={1.05}
+          transitionSpeed={1000}
+          gyroscope={true}
+          className="w-full flex justify-center"
+        >
+          <img
+            src="/Images/intropage.jpg"
+            alt="Intro"
+            className="w-[80%] max-w-md rounded-2xl shadow-lg"
+          />
+        </Tilt>
       </div>
-    </div>
+    </section>
   );
 };
 
