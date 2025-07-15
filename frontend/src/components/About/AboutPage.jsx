@@ -52,7 +52,7 @@ const AboutPage = () => {
 };
 
 const Card = ({ icon, title, text }) => (
-  <div className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center hover:-translate-y-1">
+  <div className="group bg-white dark:bg-[var(--dark-blue)] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center hover:-translate-y-1">
     <div className="text-4xl text-pink-600 mb-4 group-hover:scale-110 transition-transform">
       {icon}
     </div>

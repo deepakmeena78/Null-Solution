@@ -29,14 +29,16 @@ function HeaderPage() {
     >
       <div className="px-6 py-4 flex items-center justify-between md:gap-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center transition-all duration-500 hover:translate-x-1">
-  <img
-    src="/Images/color_logo.png"
-    alt="Logo"
-    className="w-[140px] h-auto object-contain"
-  />
-</Link>
-
+        <Link
+          to="/"
+          className="flex items-center transition-all duration-500 hover:translate-x-1"
+        >
+          <img
+            src="/Images/logo_design.png"
+            alt="Logo"
+            className="w-[140px] h-10 object-contain"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
@@ -56,7 +58,7 @@ function HeaderPage() {
           {/* Category with hover dropdown */}
           <div className="relative group">
             <span className="text-black px-4 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-pink-600 hover:text-white hover:shadow">
-              Category
+              Services
             </span>
             <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-theme)] border border-[var(--light-theme)] rounded-xl shadow-xl z-50 w-52 overflow-hidden">
               <Link
@@ -88,11 +90,13 @@ function HeaderPage() {
           </Link>
         </nav>
 
-        {/* Quote Button */}
+        {/* Join Button */}
         <div className="hidden md:block">
-          <button className="bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
-            Get A Quote
-          </button>
+          <Link to="/contact">
+            <button className="bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
+              Join Us
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}

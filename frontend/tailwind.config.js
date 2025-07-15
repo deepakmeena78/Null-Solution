@@ -1,3 +1,22 @@
+// /** @type {import('tailwindcss').Config} */
+// export default {
+//   content: [
+//     "./index.html",
+//     "./src/**/*.{js,ts,jsx,tsx}",
+//   ],
+//   theme: {
+//     transitionProperty: {
+//       transform: "transform",
+//       extend: {
+//         animation: {
+//           "spin-slow": "spin 2s linear infinite",
+//         },
+//       },
+//     },
+//   },
+//   plugins: [],
+// }
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,10 +24,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    transitionProperty: {
-        transform: "transform",
+    extend: {
+      animation: {
+        "spin-slow": "spin 2s linear infinite",
       },
+    },
   },
   plugins: [],
-}
-
+};

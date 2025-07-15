@@ -3,18 +3,18 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
   return (
-<footer className="bg-black text-black dark:bg-[var(--dark-blue)] dark:text-black">
+    <footer className="bg-black text-color dark:bg-[var(--dark-blue)] dark:text-color">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 ">
             <a href="https://flowbite.com/" className="flex items-center">
               <img
-                src="/Images/color_logo.png"
+                src="/Images/logo_design.png"
                 className="h-16 mr-3"
                 alt="FlowBite Logo"
               />
             </a>
-            <label className="[var(--text-black)]">
+            <label className="text-[var(--text-color)]">
               {" "}
               Whenever someone needs help,
               <br />
@@ -23,23 +23,18 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-[var(--text-black)] uppercase dark:text-[var(--text-black)]">
+              <h2 className="mb-6 text-sm font-semibold text-[var(--text-color)] uppercase dark:text-[var(--text-color)]">
                 Resources
               </h2>
-              <ul className="text-gray-500 dark:text-[var(--text-black)] font-medium">
+              <ul className="text-gray-500 dark:text-[var(--text-color)] font-medium">
                 <li className="mb-2 hover:text-[var(--dark-theme)]">
                   <a href="/" className="hover:underline">
                     Home
                   </a>
                 </li>
                 <li className="mb-2 hover:text-[var(--dark-theme)]">
-                  <a href="/category" className="hover:underline">
-                    Category
-                  </a>
-                </li>
-                <li className="mb-2 hover:text-[var(--dark-theme)]">
-                  <a href="/help" className="hover:underline">
-                    Help
+                  <a href="/service" className="hover:underline">
+                    Services
                   </a>
                 </li>
                 <li className="mb-2 hover:text-[var(--dark-theme)]">
@@ -55,55 +50,57 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-[var(--text-black)] uppercase dark:text-[var(--text-black)]">
+              <h2 className="mb-6 text-sm font-semibold text-[var(--text-color)] uppercase dark:text-[var(--text-color)]">
                 Follow us
               </h2>
-              <ul className="text-[var(--text-black)] dark:text-[var(--text-black)] font-medium">
-                <li className="mb-2 hover:text-[var(--dark-theme)] text-[var(--text-black)]">
+              <ul className="text-[var(--text-color)] dark:text-[var(--text-color)] font-medium">
+                <li className="mb-2 hover:text-[var(--dark-theme)] text-[var(--text-color)]">
                   <a href="https://linkedin.com/" className="hover:underline ">
                     Linkedin
                   </a>
                 </li>
-                <li className="text-[var(--text-black)] mb-2 hover:text-[var(--dark-theme)]">
+                <li className="text-[var(--text-color)] mb-2 hover:text-[var(--dark-theme)]">
                   <a href="https://github.com/" className="hover:underline">
                     GitHub
                   </a>
                 </li>
               </ul>
             </div>
+
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-[var(--text-black)] uppercase dark:text-[var(--text-black)]">
+              <h2 className="mb-6 text-sm font-semibold text-[var(--text-color)] uppercase dark:text-[var(--text-color)]">
                 Legal
               </h2>
-              <ul className="text-[var(--text-black)] dark:text-[var(--text-black)] font-medium">
+              <ul className="text-[var(--text-color)] dark:text-[var(--text-color)] font-medium">
                 <li className="mb-2">
-                  <h1> Email : deepakmeenaa78@gmail.com</h1>
+                  <a
+                    href="mailto:deepakmeenaa78@gmail.com"
+                    className="hover:underline"
+                  >
+                    Email: deepakmeenaa78@gmail.com
+                  </a>
                 </li>
                 <li className="mb-2">
-                  <h2>Phone : 6260576040</h2>
+                  <a href="tel:6260576040" className="hover:underline">
+                    Phone: 6260576040
+                  </a>
                 </li>
                 <li className="mb-2">
-                  <h2>Address : Aamla Khategaon Dewas</h2>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Aamla+Khategaon+Dewas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Address: Aamla Khategaon Dewas
+                  </a>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-[var(--text-black)] sm:text-center dark:text-[var(--text-black)]">
-            © 2023{" "}
-            <img
-              src="/Images/logo.png"
-              alt="Flowbite Logo"
-              className="inline h-6 w-auto"
-            />{" "}
-            Easy Solution. All Rights Reserved.
-          </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0">
+
+               <div className="flex mt-4 sm:justify-center sm:mt-6">
             <a
               href="https://facebook.com"
-              className="text-[var(--text-black)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)]"
+              className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)]"
             >
               <svg
                 className="w-4 h-4"
@@ -122,7 +119,7 @@ const Footer = () => {
             </a>
             <a
               href="https://wa.me/yourwhatsapplink"
-              className="text-[var(--text-black)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
+              className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
             >
               <svg
                 className="w-6 h-5"
@@ -137,7 +134,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/deepakmeena78"
-              className="text-[var(--text-black)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
+              className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -152,7 +149,7 @@ const Footer = () => {
             </a>
             <a
               href="/"
-              className="text-[var(--text-black)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
+              className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -171,7 +168,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="text-[var(--text-black)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
+              className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
             >
               <svg
                 className="w-4 h-4"
@@ -185,6 +182,40 @@ const Footer = () => {
               <span className="sr-only">Instagram account</span>
             </a>
           </div>
+            </div>
+          </div>
+        </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+         
+          <span className="text-sm text-[var(--text-color)] sm:text-center dark:text-[var(--text-color)]">
+  © 2025{" "}
+  <img
+    src="/Images/logo_design.png"
+    alt="Flowbite Logo"
+    className="inline h-6 w-auto"
+  />{" "}
+  Null Solution. All Rights Reserved.
+</span>
+
+<p className="text-xs text-[var(--text-color)] dark:text-[var(--text-color)] mt-1 sm:text-center">
+  Designed & Developed by{" "}
+  <a
+    href="mailto:deepakmeenaa78@gmail.com"
+    className="hover:underline text-pink-600"
+  >
+    Deepak Meena
+  </a>{" "}
+  | Contact:{" "}
+  <a
+    href="tel:6260576040"
+    className="hover:underline text-pink-600"
+  >
+    6260576040
+  </a>
+</p>
+
+         
         </div>
       </div>
     </footer>
@@ -192,4 +223,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
