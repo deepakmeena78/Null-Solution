@@ -64,10 +64,10 @@ const ContactUs = () => {
     <div className="max-w-6xl mx-auto bg-white dark:bg-[var(--light-grey)] rounded-lg py-6 px-4">
       <div className="grid lg:grid-cols-3 gap-6 items-center">
         <div className="grid grid-cols-2 gap-4">
-          <InfoCard Icon={IoLocationOutline} title="Visit office" content="123 Main Street, City, Country" />
-          <InfoCard Icon={IoCallOutline} title="Call us" content="+158 996 888" />
+          <InfoCard Icon={IoLocationOutline} title="Visit office" content="Near Birla school Building 11 2nd floor durgapura Jaipur (302018)" />
+          <InfoCard Icon={IoCallOutline} title="Call us" content="+919680948484" />
           <InfoCard Icon={FaWhatsapp} title="Chat to us" content="info@example.com" />
-          <InfoCard Icon={MdOutlineChat} title="Fax" content="+1-548-2588" />
+          <InfoCard Icon={MdOutlineChat} title="Fax" content="+919680948484" />
         </div>
 
         <div className="lg:col-span-2 bg-gray-100 dark:bg-[var(--light-grey)] rounded-lg p-6">

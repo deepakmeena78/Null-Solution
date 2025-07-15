@@ -20,29 +20,53 @@ const AboutPage = () => {
             <FaLightbulb className="text-pink-600 text-xl" /> Company Overview
           </h2>
           <p className="leading-relaxed text-gray-700 dark:text-gray-200">
-            Our company is a fast-growing and new age software development company which provides holistic digital marketing solutions to clients. We aim to exceed expectations and help businesses identify, visualize, and pursue new growth opportunities.
-          </p>
-          <p className="leading-relaxed text-gray-700 dark:text-gray-200">
-            With technology at our foundation and creativity at our peak, we deliver engaging customer experiences that lead to profitable results.
+            About Null Solutions
+Your Intelligent Outsourcing Partner
+At Null Solutions, we redefine business process outsourcing by blending skilled expertise with cutting-edge technologies like automation and generative AI. We specialize in transforming back-office and support operations across core areas such as Procure-to-Pay (P2P), Record-to-Report (R2R), Source-to-Pay (S2P), Audit Support, and Customer Support.
+Our mission is simple: empower businesses to focus on growth while we streamline their operations with efficiency, accuracy, and scalability at the core.
           </p>
         </div>
 
-        {/* What We Do Section */}
         <div className="grid md:grid-cols-3 gap-8">
           <Card
             icon={<FaCogs />}
             title="Our Services"
-            text="We specialize in web design & development, mobile app development (Android & iOS), SEO, SMM, and complete digital marketing solutions."
+            text="We offer smart, AI-powered solutions in P2P, R2R, S2P, audit support, and customer service — designed to optimize and streamline your operations."
           />
           <Card
             icon={<FaChartLine />}
             title="Strategy & Growth"
-            text="We use cutting-edge tools and creative digital strategies to maximize brand exposure and client ROI through bespoke marketing campaigns."
+            text="Our strategy blends expert talent with automation and AI to drive efficiency, scalability, and continuous growth for your business."
           />
           <Card
             icon={<FaLightbulb />}
             title="Why Choose Us?"
-            text="Our team turns your dreams into a digital reality with innovation, precision, and a deep understanding of market needs."
+            text="Because we deliver secure, scalable, and intelligent outsourcing — with measurable results and a commitment to excellence."
+          />
+
+
+          
+        </div>
+         {/* What We Do Section */}
+        <h1 className="text-4xl text-black font-extrabold tracking-wide mb-4 relative inline-block">
+          What Makes Us{" "}
+          <span className="text-[var(--dark-theme)]">Different</span>
+        </h1>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card
+            icon={<FaCogs />}
+            title="Expert-Led Delivery"
+            text="Our experienced professionals drive precision, consistency, and excellence across all financial and support functions."
+          />
+          <Card
+            icon={<FaChartLine />}
+            title="Tech-Driven Innovation"
+            text="We integrate intelligent automation, agentic workflows, and conversational AI into our processes, ensuring smarter, faster, and more effective outcomes"
+          />
+          <Card
+            icon={<FaLightbulb />}
+            title="Scalable & Secure Solutions?"
+            text="Whether you're a startup or a large enterprise, our solutions scale with your needs — while meeting the highest standards in data privacy and information security."
           />
         </div>
       </div>

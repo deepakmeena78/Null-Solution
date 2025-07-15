@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 ">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 src="/Images/logo_design.png"
                 className="h-16 mr-3"
-                alt="FlowBite Logo"
+                alt="logo Logo"
               />
             </a>
             <label className="text-[var(--text-color)]">
@@ -55,13 +55,11 @@ const Footer = () => {
               </h2>
               <ul className="text-[var(--text-color)] dark:text-[var(--text-color)] font-medium">
                 <li className="mb-2 hover:text-[var(--dark-theme)] text-[var(--text-color)]">
-                  <a href="https://linkedin.com/" className="hover:underline ">
+                  <a
+                    href="https://www.linkedin.com/in/null-solutions/"
+                    className="hover:underline "
+                  >
                     Linkedin
-                  </a>
-                </li>
-                <li className="text-[var(--text-color)] mb-2 hover:text-[var(--dark-theme)]">
-                  <a href="https://github.com/" className="hover:underline">
-                    GitHub
                   </a>
                 </li>
               </ul>
@@ -74,25 +72,26 @@ const Footer = () => {
               <ul className="text-[var(--text-color)] dark:text-[var(--text-color)] font-medium">
                 <li className="mb-2">
                   <a
-                    href="mailto:deepakmeenaa78@gmail.com"
+                    href="mailto:example@gmail.com"
                     className="hover:underline"
                   >
-                    Email: deepakmeenaa78@gmail.com
+                    Email: example@gmail.com
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="tel:6260576040" className="hover:underline">
-                    Phone: 6260576040
+                  <a href="tel:9680948484" className="hover:underline">
+                    Phone: +919680948484
                   </a>
                 </li>
                 <li className="mb-2">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Aamla+Khategaon+Dewas"
+                    href="https://www.google.com/maps/search/?api=1&query=Near+Birla+School+Building+11+2nd+Floor+Durgapura+Jaipur+302018"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    Address: Aamla Khategaon Dewas
+                    Address: Near Birla school Building 11 2nd floor durgapura
+                    Jaipur (302018)
                   </a>
                 </li>
               </ul>
@@ -118,7 +117,7 @@ const Footer = () => {
                   <span className="sr-only">Facebook page</span>
                 </a>
                 <a
-                  href="https://wa.me/yourwhatsapplink"
+                  href="https://wa.me/919680948484"
                   className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
                 >
                   <svg
@@ -133,7 +132,7 @@ const Footer = () => {
                   <span className="sr-only">WhatsApp</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/deepakmeena78"
+                  href="https://www.linkedin.com/in/null-solutions"
                   className="text-[var(--text-color)] hover:text-[var(--dark-theme)] dark:hover:text-[var(--dark-theme)] ms-5"
                 >
                   <svg
@@ -200,7 +199,7 @@ const Footer = () => {
           <p className="text-xs text-[var(--text-color)] dark:text-[var(--text-color)] mt-1 sm:text-center">
             Designed & Developed by{" "}
             <a
-              href="mailto:deepakmeenaa78@gmail.com"
+              href="mailto:example@gmail.com"
               className="hover:underline text-pink-600"
             >
               Deepak Meena
