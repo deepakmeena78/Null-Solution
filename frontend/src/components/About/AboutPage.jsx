@@ -2,7 +2,6 @@ import { FaLightbulb, FaCogs, FaChartLine } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
-    // <div className="pt-[100px] px-4 bg-white dark:bg-[var(--light-theme)] text-gray-800 dark:text-white min-h-screen">
     <div className="pt-[100px] pb-20 px-4 bg-white dark:bg-[var(--light-theme)] text-gray-800 dark:text-white min-h-screen">
     <div className="max-w-7xl mx-auto space-y-16">
         {/* Page Title */}
