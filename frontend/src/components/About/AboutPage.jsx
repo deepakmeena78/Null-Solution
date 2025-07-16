@@ -3,7 +3,7 @@ import { FaLightbulb, FaCogs, FaChartLine } from "react-icons/fa";
 const AboutPage = () => {
   return (
     <div className="pt-[100px] pb-20 px-4 bg-white dark:bg-[var(--light-theme)] text-gray-800 dark:text-white min-h-screen">
-    <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl mx-auto space-y-16">
         {/* Page Title */}
         <div className="text-center">
           <h1 className="text-4xl text-black font-extrabold tracking-wide mb-4 relative inline-block">
@@ -17,13 +17,18 @@ const AboutPage = () => {
         {/* Company Overview Section */}
         <div className="bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 shadow-lg rounded-2xl p-8 md:p-10 space-y-6">
           <h2 className="text-2xl font-bold flex items-center gap-2">
-            <FaLightbulb className="text-pink-600 text-xl" /> Company Overview
+            <FaLightbulb className="text-[var(--hover-color)] text-xl" /> Company Overview
           </h2>
           <p className="leading-relaxed text-gray-700 dark:text-gray-200">
-            About Null Solutions
-Your Intelligent Outsourcing Partner
-At Null Solutions, we redefine business process outsourcing by blending skilled expertise with cutting-edge technologies like automation and generative AI. We specialize in transforming back-office and support operations across core areas such as Procure-to-Pay (P2P), Record-to-Report (R2R), Source-to-Pay (S2P), Audit Support, and Customer Support.
-Our mission is simple: empower businesses to focus on growth while we streamline their operations with efficiency, accuracy, and scalability at the core.
+            About Null Solutions Your Intelligent Outsourcing Partner At Null
+            Solutions, we redefine business process outsourcing by blending
+            skilled expertise with cutting-edge technologies like automation and
+            generative AI. We specialize in transforming back-office and support
+            operations across core areas such as Procure-to-Pay (P2P),
+            Record-to-Report (R2R), Source-to-Pay (S2P), Audit Support, and
+            Customer Support. Our mission is simple: empower businesses to focus
+            on growth while we streamline their operations with efficiency,
+            accuracy, and scalability at the core.
           </p>
         </div>
 
@@ -43,11 +48,8 @@ Our mission is simple: empower businesses to focus on growth while we streamline
             title="Why Choose Us?"
             text="Because we deliver secure, scalable, and intelligent outsourcing — with measurable results and a commitment to excellence."
           />
-
-
-          
         </div>
-         {/* What We Do Section */}
+        {/* What We Do Section */}
         <h1 className="text-4xl text-black font-extrabold tracking-wide mb-4 relative inline-block">
           What Makes Us{" "}
           <span className="text-[var(--dark-theme)]">Different</span>
@@ -76,10 +78,10 @@ Our mission is simple: empower businesses to focus on growth while we streamline
 
 const Card = ({ icon, title, text }) => (
   <div className="group bg-white dark:bg-[var(--dark-blue)] border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 text-center hover:-translate-y-1">
-    <div className="text-4xl text-pink-600 mb-4 group-hover:scale-110 transition-transform">
+    <div className="text-4xl text-[var(--dark-theme)] mb-4 group-hover:scale-110 transition-transform">
       {icon}
     </div>
-    <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-600 transition">
+    <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--hover-color)] transition">
       {title}
     </h3>
     <p className="text-gray-600 dark:text-gray-300 text-sm">{text}</p>

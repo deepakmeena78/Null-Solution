@@ -44,20 +44,20 @@ function HeaderPage() {
         <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
           <Link
             to="/"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-pink-600 hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-pink-600 hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
           >
             About Us
           </Link>
 
           {/* Category with hover dropdown */}
           <div className="relative group">
-            <span className="text-black px-4 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-pink-600 hover:text-white hover:shadow">
+            <span className="text-black px-4 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow">
               Services
             </span>
             <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-theme)] border border-[var(--light-theme)] rounded-xl shadow-xl z-50 w-52 overflow-hidden">
@@ -84,7 +84,7 @@ function HeaderPage() {
 
           <Link
             to="/contact"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-pink-600 hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
           >
             Contact Us
           </Link>
@@ -93,7 +93,7 @@ function HeaderPage() {
         {/* Join Button */}
         <div className="hidden md:block">
           <Link to="/contact">
-            <button className="bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
+            <button className="bg-[var(--hover-color)] hover:bg-[var(--dark-theme)] text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
               Join Us
             </button>
           </Link>
@@ -103,7 +103,7 @@ function HeaderPage() {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-2xl text-gray-700 dark:text-white hover:text-pink-600 transition"
+            className="text-2xl text-gray-700 dark:text-white hover:text-[var(--hover-color)] transition"
           >
             {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
@@ -116,33 +116,33 @@ function HeaderPage() {
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-pink-600"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-pink-600"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
           >
             About Us
           </Link>
           <Link
             to="/service"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-pink-600"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
           >
             Services
           </Link>
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-pink-600"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
           >
             Contact Us
           </Link>
           <Link to="/contact">
-            <button className="w-full bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
+            <button className="w-full bg-[var(--hover-color)] hover:bg-pink-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
               Join Us
             </button>
           </Link>

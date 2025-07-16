@@ -1,4 +1,5 @@
 import Tilt from "react-parallax-tilt";
+import { Link } from "react-router-dom";
 
 const IntroPage = () => {
   return (
@@ -13,15 +14,17 @@ const IntroPage = () => {
             We are passionate about creating innovative software solutions and delivering top-notch digital experiences. Let's build the future together!
           </p> */}
           <p className="text-lg font-normal text-black dark:text-black mb-6">
-  We are passionate about creating innovative software solutions and delivering top-notch digital experiences. Let's build the future together!
-</p>
+            We are passionate about creating innovative software solutions and
+            delivering top-notch digital experiences. Let's build the future
+            together!
+          </p>
 
-          <a
-            href="#services"
-            className="inline-block bg-[var(--dark-theme)] text-white px-6 py-3 rounded-full font-medium hover:bg-pink-700 transition"
+          <Link
+            to="/about"
+            className="inline-block bg-[var(--dark-theme)] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[var(--hover-color)] hover:shadow-lg transition-all duration-300"
           >
             Explore Services
-          </a>
+          </Link>
         </div>
 
         {/* Image with Mouse Effect */}

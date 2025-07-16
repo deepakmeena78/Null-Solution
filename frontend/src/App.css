@@ -1,11 +1,11 @@
 :root {
-    --dark-theme: #af1361;
-    --light-theme: #fae1ee;
+    /* --dark-theme: #69D84F; */
+    --dark-theme: #469035;
+    --light-theme: #DAF6D3;
     --text-color: #d8d0d0;
     --dark-blue: #1F2937;
-    --link-blue: #00367c;
-    --mid-purple: #8243acc9;
-    --bhagwa: #ff9900;
+    /* --hover-color: #3A782C; */
+    --hover-color: #5DC047;
 }
 
 img:hover {

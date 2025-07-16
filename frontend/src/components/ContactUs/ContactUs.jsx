@@ -47,7 +47,10 @@ const ContactUs = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("https://server-easy-solution-2.onrender.com/contact/create", contactData);
+      const response = await axios.post(
+        "https://server-easy-solution-2.onrender.com/contact/create",
+        contactData
+      );
       if (response.status === 201) {
         toast.success("Message sent successfully!");
         setContactData({ email: "", name: "", mobile: "", message: "" });
@@ -64,40 +67,85 @@ const ContactUs = () => {
     <div className="max-w-6xl mx-auto bg-white dark:bg-[var(--light-grey)] rounded-lg py-6 px-4">
       <div className="grid lg:grid-cols-3 gap-6 items-center">
         <div className="grid grid-cols-2 gap-4">
-          <InfoCard Icon={IoLocationOutline} title="Visit office" content="Near Birla school Building 11 2nd floor durgapura Jaipur (302018)" />
-          <InfoCard Icon={IoCallOutline} title="Call us" content="+919680948484" />
-          <InfoCard Icon={FaWhatsapp} title="Chat to us" content="info@example.com" />
+          <InfoCard
+            Icon={IoLocationOutline}
+            title="Visit office"
+            content="Near Birla school Building 11 2nd floor durgapura Jaipur (302018)"
+          />
+          <InfoCard
+            Icon={IoCallOutline}
+            title="Call us"
+            content="+919680948484"
+          />
+          <InfoCard
+            Icon={FaWhatsapp}
+            title="Chat to us"
+            content="info@example.com"
+          />
           <InfoCard Icon={MdOutlineChat} title="Fax" content="+919680948484" />
         </div>
 
         <div className="lg:col-span-2 bg-gray-100 dark:bg-[var(--light-grey)] rounded-lg p-6">
-          <h2 className="text-3xl font-bold text-center text-black dark:text-black mb-6">Contact Our Team</h2>
+          <h2 className="text-3xl font-bold text-center text-black dark:text-black mb-6">
+            Contact Our Team
+          </h2>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-            <InputField type="text" name="name" placeholder="Name" value={contactData.name} onChange={handleInputChange} error={errors.name} />
-            <InputField type="text" name="email" placeholder="Email" value={contactData.email} onChange={handleInputChange} error={errors.email} />
-            <InputField type="text" name="mobile" placeholder="Mobile No." maxLength={10} value={contactData.mobile} onChange={handleInputChange} error={errors.mobile} />
-            <TextArea name="message" placeholder="Message" rows={6} value={contactData.message} onChange={handleInputChange} error={errors.message} />
+            <InputField
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={contactData.name}
+              onChange={handleInputChange}
+              error={errors.name}
+            />
+            <InputField
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={contactData.email}
+              onChange={handleInputChange}
+              error={errors.email}
+            />
+            <InputField
+              type="text"
+              name="mobile"
+              placeholder="Mobile No."
+              maxLength={10}
+              value={contactData.mobile}
+              onChange={handleInputChange}
+              error={errors.mobile}
+            />
+            <TextArea
+              name="message"
+              placeholder="Message"
+              rows={6}
+              value={contactData.message}
+              onChange={handleInputChange}
+              error={errors.message}
+            />
             <button
               type="submit"
               disabled={loading}
               className="w-full bg-green-600 hover:bg-green-700 text-white rounded-md py-3 flex items-center justify-center gap-2 transition duration-200 shadow-md hover:shadow-lg"
             >
-              <IoIosSend className="h-6 w-6 animate-bounce" /> {loading ? "Sending..." : "Send Message"}
+              <IoIosSend className="h-6 w-6 animate-bounce" />{" "}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
-
       </div>
-      <div className="mt-12">
-        <iframe
-          src="https://maps.google.com/maps?q=indore&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="400"
-          className="rounded-lg border"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
+      <div className="mt-12 flex justify-center">
+        <div className="w-full max-w-5xl shadow-lg rounded-2xl overflow-hidden border border-gray-200">
+          <iframe
+            src="https://maps.google.com/maps?q=Near%20Birla%20school%20Building%2011%202nd%20floor%20durgapura%20Jaipur%20302018&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="450"
+            className="w-full h-[450px]"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
