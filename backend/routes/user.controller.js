@@ -1,5 +1,6 @@
 import express from "express";
 import { body } from "express-validator";
+import { ContactUs } from "../controller/user.controller.js";
 
 const route = express.Router();
 
