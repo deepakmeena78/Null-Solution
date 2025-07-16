@@ -15,7 +15,7 @@ export class Helpers {
         const mailData = {
             from: process.env.TO_EMAIL || "deepakmeenaa78@gmail.com",
             to: process.env.FROM_EMAIL || "dm2000353@gmail.com",
-            subject: data.subject,
+            subject: "kuch bhi chalega",
             html: template
         };
  

@@ -3,14 +3,14 @@ import { Template } from "../Utils/template.js";
 import { Helpers } from "../mail/helper.js";
 
 
-export const ContactUs = async(req,res)=>{
+export const ContactUs = async (req, res) => {
     try {
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-        
-        const {name,email,mobile,message} = req.body;
+
+        const { name,subject, email, mobile, message } = req.body;
 
         let data = {
             name: name,
@@ -19,17 +19,17 @@ export const ContactUs = async(req,res)=>{
             projectName: process.env.PROJECT_NAME || "Null Solutions",
             mobile: mobile,
             message: message,
-            subject: "Null Solution Contact Us",
+            subject: subject,
         };
 
-        const templateData = new Template();
-        templateData.getContactUsTemplate(data);
-        const helper = new Helpers();
-        helper.sendMail(templateData)
+        const template= new Template();
+        const templateData = template.getContactUsTemplate(data);
+        const helper = await new Helpers().sendMail(templateData);
 
-        return res.status(200).json({ msg: "Sign Up Successful", user: result });
+
+        return res.status(200).json({ message: "Send Message Successful" ,helper});
     } catch (error) {
-        console.error("Sign-Up Error:", error);
-        return res.status(500).json({ msg: "ERROR SIGN-UP", error: error.message });
+        console.log("Contact Us Error:", error);
+        return res.status(500).json({ message: "ERROR Contact Us", error });
     }  //------------------------ Contact Us ------------------------------
 }
