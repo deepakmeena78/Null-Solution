@@ -121,8 +121,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <div className="flex items-center space-x-2 mb-3">
-            <img src="/Images/logo_design.png" alt="Logo" className="h-8" />
-            <span className="text-xl font-bold text-[var(--dark-theme)]">Null Solutions</span>
+            <img src="/Images/logo_design.png" alt="Logo" className="h-14" />
           </div>
           <p className="text-sm text-[#606080]">
             Null Solutions is your smart outsourcing partner. We provide AI-powered back-office and support solutions for modern businesses.

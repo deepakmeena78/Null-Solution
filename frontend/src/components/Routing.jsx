@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Home/HomePage";
 import ContactUs from "./ContactUs/ContactUs";
-import ServicePage from "./Service/ServicePage";
 import AboutPage from "./About/AboutPage";
 import TermsPage from "./Terms&Conditions/TermsPage";
 import PrivacyPolicy from "./Terms&Conditions/PrivacyPolicy";
+import ServicePage from "./Service/ServicePage";
 
 const Routing = () => {
   return (

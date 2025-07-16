@@ -1,260 +1,89 @@
 // import React, { useEffect, useState } from "react";
-// // import axios from "axios";
 // import { useLocation } from "react-router-dom";
 
 // const ServicePage = () => {
 //   const [servicesData, setServicesData] = useState([]);
-//   const [filteredData, setFilteredData] = useState([]);
 //   const location = useLocation();
 
-//   const categories = ["All", "Design", "Development", "CRM"];
-
-//   const query = new URLSearchParams(location.search);
-//   const categoryParam = query.get("category") || "All";
-
 //   useEffect(() => {
-//     const fetchServices = async () => {
-//       try {
-//         const dummyData = [
-//           {
-//             icon: "/images/design.png",
-//             title: "Web Design Services",
-//             category: "Design",
-//             description:
-//               "Skilled designers offer contemporary website designing solution. Obtain an interactive, attractive and responsive website for your online business.",
-//           },
-//           {
-//             icon: "/images/dev.png",
-//             title: "Web Development Services",
-//             category: "Development",
-//             description:
-//               "Team of proficient developers manages website development projects to deliver fully functional and seamless websites and web applications to clientele.",
-//           },
-//           {
-//             icon: "/images/crm.png",
-//             title: "CRM/ERP Development",
-//             category: "CRM",
-//             description:
-//               "We make your all problem and solution under one computer where you find all your company daily planning needs data in CRM/ERP software.",
-//           },
-//         ];
+//     const dummyData = [
+//       {
+//         icon: "/images/design.png",
+//         title: "Web Design Services",
+//         category: "Design",
+//         description:
+//           "Skilled designers offer contemporary website designing solution. Obtain an interactive, attractive and responsive website for your online business.",
+//       },
+//       {
+//         icon: "/images/dev.png",
+//         title: "Web Development Services",
+//         category: "Development",
+//         description:
+//           "Team of proficient developers manages website development projects to deliver fully functional and seamless websites and web applications to clientele.",
+//       },
+//       {
+//         icon: "/images/crm.png",
+//         title: "CRM/ERP Development",
+//         category: "CRM",
+//         description:
+//           "We make your all problem and solution under one computer where you find all your company daily planning needs data in CRM/ERP software.",
+//       },
+//     ];
 
-//         // const response = await axios.get("https://your-api.com/services");
-//         // setServicesData(response.data);
-//         setServicesData(dummyData);
-//       } catch (err) {
-//         console.error("Failed to fetch services:", err);
-//       }
-//     };
-
-//     fetchServices();
+//     setServicesData(dummyData);
 //   }, []);
 
-//   useEffect(() => {
-//     if (categoryParam === "All") {
-//       setFilteredData(servicesData);
-//     } else {
-//       const filtered = servicesData.filter(
-//         (service) => service.category === categoryParam
-//       );
-//       setFilteredData(filtered);
-//     }
-//   }, [servicesData, categoryParam]);
-
 //   return (
-//     // <section className="py-12 px-4 bg-white dark:bg-white transition-colors duration-300 min-h-screen">
-//       <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white transition-colors duration-300 min-h-screen">
+//     <section className="pt-24 pb-12 px-4 bg-white dark:bg-white min-h-screen">
 //       <div className="max-w-7xl mx-auto">
-//         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
+//         <h2 className="text-4xl font-bold text-center text-[var(--dark-blue)] mb-14">
 //           Our Services
 //         </h2>
 
-//         {/* Filter Buttons */}
-//         <div className="flex justify-center gap-4 mb-10 flex-wrap">
-//           {categories.map((cat) => (
-//             <a
-//               key={cat}
-//               href={`?category=${cat}`}
-//               className={`px-4 py-2 rounded-full border text-sm font-medium transition shadow-sm hover:bg-white hover:text-white ${
-//                 categoryParam === cat
-//                   ? "bg-[var(--dark-theme)] text-white"
-//                   : "bg-white border-gray-300 text-gray-700"
+//         {/* Services Grid */}
+//         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+//           {servicesData.map((service, index) => (
+//             <div
+//               key={index}
+//               className={`group relative rounded-2xl p-6 shadow-lg transition-all duration-300 transform bg-white border hover:shadow-2xl hover:-translate-y-1 min-h-[400px] flex flex-col justify-between ${
+//                 index === 1 ? "bg-[var(--dark-blue)]" : ""
 //               }`}
 //             >
-//               {cat}
-//             </a>
-//           ))}
-//         </div>
-
-//         {/* Services Grid */}
-//         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-//           {filteredData.length > 0 ? (
-//             filteredData.map((service, index) => (
-//               <div
-//                 key={index}
-//                 className="group text-black bg-white dark:bg-white rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl transition-all duration-300 hover:bg-[var(--dark-theme)] cursor-pointer"
-//               >
-//                 <div className="flex justify-center mb-4">
-//                   <img
-//                     src={service.icon}
-//                     alt={service.title}
-//                     className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-//                   />
-//                 </div>
-//                 <h3 className="text-lg font-semibold text-center text-gray-800 dark:text-white group-hover:text-white transition">
-//                   {service.title}
-//                 </h3>
-//                 <p className="text-sm text-center text-gray-600 dark:text-gray-300 mt-2 group-hover:text-white transition">
-//                   {service.description}
-//                 </p>
-//                 <div className="text-center mt-4">
-//                   <a
-//                     href="#"
-//                     className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex justify-center items-center gap-1 group-hover:text-white transition"
-//                   >
-//                     Learn More <span className="text-lg">›</span>
-//                   </a>
-//                 </div>
+//               {/* Category Tag */}
+//               <div className="absolute top-2 right-2 bg-[var(--dark-blue)] text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
+//                 {service.category}
 //               </div>
-//             ))
-//           ) : (
-//             <p className="text-center text-gray-500 col-span-full">
-//               No services found for "{categoryParam}"
-//             </p>
-//           )}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
 
-// export default ServicePage;
-
-
-
-// import React, { useEffect, useState } from "react";
-// import { useLocation } from "react-router-dom";
-
-// const ServicePage = () => {
-//   const [servicesData, setServicesData] = useState([]);
-//   const [filteredData, setFilteredData] = useState([]);
-//   const location = useLocation();
-
-//   const categories = ["All", "Design", "Development", "CRM"];
-//   const query = new URLSearchParams(location.search);
-//   const categoryParam = query.get("category") || "All";
-
-//   useEffect(() => {
-//     const fetchServices = async () => {
-//       try {
-//         const dummyData = [
-//           {
-//             icon: "/images/design.png",
-//             title: "Web Design Services",
-//             category: "Design",
-//             description:
-//               "Skilled designers offer contemporary website designing solution. Obtain an interactive, attractive and responsive website for your online business.",
-//           },
-//           {
-//             icon: "/images/dev.png",
-//             title: "Web Development Services",
-//             category: "Development",
-//             description:
-//               "Team of proficient developers manages website development projects to deliver fully functional and seamless websites and web applications to clientele.",
-//           },
-//           {
-//             icon: "/images/crm.png",
-//             title: "CRM/ERP Development",
-//             category: "CRM",
-//             description:
-//               "We make your all problem and solution under one computer where you find all your company daily planning needs data in CRM/ERP software.",
-//           },
-//         ];
-//         setServicesData(dummyData);
-//       } catch (err) {
-//         console.error("Failed to fetch services:", err);
-//       }
-//     };
-//     fetchServices();
-//   }, []);
-
-//   useEffect(() => {
-//     if (categoryParam === "All") {
-//       setFilteredData(servicesData);
-//     } else {
-//       const filtered = servicesData.filter(
-//         (service) => service.category === categoryParam
-//       );
-//       setFilteredData(filtered);
-//     }
-//   }, [servicesData, categoryParam]);
-
-//   return (
-//     <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white transition-colors duration-300 min-h-screen">
-//       <div className="max-w-7xl mx-auto">
-//         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
-//           Our Services
-//         </h2>
-
-//         {/* Filter Buttons */}
-//         <div className="flex justify-center gap-4 mb-10 flex-wrap">
-//           {categories.map((cat) => (
-//             <a
-//               key={cat}
-//               href={`?category=${cat}`}
-//               className={`px-4 py-2 rounded-full border text-sm font-medium transition shadow-sm hover:bg-white hover:text-white ${
-//                 categoryParam === cat
-//                   ? "bg-[var(--dark-theme)] text-white"
-//                   : "bg-white border-gray-300 text-gray-700"
-//               }`}
-//             >
-//               {cat}
-//             </a>
-//           ))}
-//         </div>
-
-//         {/* Services Grid */}
-//         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-//           {filteredData.length > 0 ? (
-//             filteredData.map((service, index) => (
-//               <div
-//                 key={index}
-//                 className="group relative text-white rounded-2xl p-6 shadow-lg transition-all duration-300 cursor-pointer bg-gradient-to-r from-pink-600 via-purple-700 to-gray-900"
+//               <h3
+//                 className={`text-lg font-semibold text-center mb-2 transition group-hover:text-[var(--dark-blue)] ${
+//                   index === 1 ? "text-white" : "text-gray-800"
+//                 }`}
 //               >
-//                 {/* Popup Tag on Hover */}
-//                 <div className="absolute top-2 right-2 bg-white text-black text-xs font-semibold px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-//                   {service.category}
-//                 </div>
-
-//                 <div className="flex justify-center mb-4">
-//                   <img
-//                     src={service.icon}
-//                     alt={service.title}
-//                     className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-//                   />
-//                 </div>
-
-//                 <h3 className="text-lg font-semibold text-center group-hover:text-white transition">
-//                   {service.title}
-//                 </h3>
-//                 <p className="text-sm text-center text-gray-200 mt-2 group-hover:text-white transition">
-//                   {service.description}
-//                 </p>
-//                 <div className="text-center mt-4">
-//                   <a
-//                     href="#"
-//                     className="text-sm font-semibold text-white hover:underline flex justify-center items-center gap-1 group-hover:text-white transition"
-//                   >
-//                     Learn More <span className="text-lg">›</span>
-//                   </a>
-//                 </div>
+//                 {service.title}
+//               </h3>
+//               <p
+//                 className={`text-sm text-center transition ${
+//                   index === 1
+//                     ? "text-white"
+//                     : "text-[var(--dark-blue)] group-hover:text-[var(--dark-blue)]"
+//                 }`}
+//               >
+//                 {service.description}
+//               </p>
+//               <div className="text-center mt-4">
+//                 <a
+//                   href="#"
+//                   className={`text-sm font-semibold inline-flex items-center gap-1 transition-all duration-300 ${
+//                     index === 1
+//                       ? "text-white hover:text-pink-300"
+//                       : "text-blue-600 hover:text-[var(--dark-blue)]"
+//                   }`}
+//                 >
+//                   Learn More <span className="text-lg">›</span>
+//                 </a>
 //               </div>
-//             ))
-//           ) : (
-//             <p className="text-center text-gray-500 col-span-full">
-//               No services found for "{categoryParam}"
-//             </p>
-//           )}
+//             </div>
+//           ))}
 //         </div>
 //       </div>
 //     </section>
@@ -269,12 +98,7 @@ import { useLocation } from "react-router-dom";
 
 const ServicePage = () => {
   const [servicesData, setServicesData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
   const location = useLocation();
-
-  const categories = ["All", "Design", "Development", "CRM"];
-  const query = new URLSearchParams(location.search);
-  const categoryParam = query.get("category") || "All";
 
   useEffect(() => {
     const dummyData = [
@@ -304,75 +128,41 @@ const ServicePage = () => {
     setServicesData(dummyData);
   }, []);
 
-  useEffect(() => {
-    if (categoryParam === "All") {
-      setFilteredData(servicesData);
-    } else {
-      const filtered = servicesData.filter(
-        (service) => service.category === categoryParam
-      );
-      setFilteredData(filtered);
-    }
-  }, [servicesData, categoryParam]);
-
   return (
-    <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white min-h-screen">
+    <section className="pt-24 pb-12 px-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-14">
           Our Services
         </h2>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center gap-4 mb-10 flex-wrap">
-          {categories.map((cat) => (
-            <a
-              key={cat}
-              href={`?category=${cat}`}
-              className={`px-4 py-2 rounded-full border text-sm font-medium transition shadow-sm hover:bg-white hover:text-white ${
-                categoryParam === cat
-                  ? "bg-[var(--dark-theme)] text-white"
-                  : "bg-white border-gray-300 text-gray-700"
-              }`}
-            >
-              {cat}
-            </a>
-          ))}
-        </div>
-
         {/* Services Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredData.length > 0 ? (
-            filteredData.map((service, index) => (
-              <div
-                key={index}
-                className="group relative text-gray-800 dark:text-gray-100 rounded-2xl p-6 shadow-lg bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 transition-all duration-300 cursor-pointer hover:scale-[1.02]"
-              >
-                {/* Hover Popup */}
-                <div className="absolute top-2 right-2 bg-white text-black text-xs font-semibold px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-                  {service.category}
-                </div>
-
-                <h3 className="text-lg font-semibold text-center group-hover:text-pink-700 transition">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-center text-gray-600 dark:text-gray-300 mt-2 group-hover:text-pink-800 dark:group-hover:text-pink-200 transition">
-                  {service.description}
-                </p>
-                <div className="text-center mt-4">
-                  <a
-                    href="#"
-                    className="text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline flex justify-center items-center gap-1 group-hover:text-pink-800 dark:group-hover:text-pink-300 transition"
-                  >
-                    Learn More <span className="text-lg">›</span>
-                  </a>
-                </div>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <div
+              key={index}
+              className="group relative rounded-2xl p-6 shadow-lg transition-all duration-300 transform bg-white border hover:bg-[var(--dark-blue)] hover:shadow-2xl hover:-translate-y-1 min-h-[420px] flex flex-col justify-between"
+            >
+              {/* Category Tag */}
+              <div className="absolute top-2 right-2 bg-[var(--hover-color)] text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
+                {service.category}
               </div>
-            ))
-          ) : (
-            <p className="text-center text-gray-500 col-span-full">
-              No services found for "{categoryParam}"
-            </p>
-          )}
+
+              <h3 className="text-lg font-semibold text-center mb-2 transition group-hover:text-white text-gray-800">
+                {service.title}
+              </h3>
+              <p className="text-sm text-center text-gray-600 group-hover:text-white transition">
+                {service.description}
+              </p>
+              <div className="text-center mt-4">
+                <a
+                  href="#"
+                  className="text-sm font-semibold inline-flex items-center gap-1 text-blue-600 group-hover:text-white transition-all duration-300"
+                >
+                  Learn More <span className="text-lg">›</span>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 const IntroPage = () => {
   return (
-    <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white min-h-screen">
+    // <section className="pt-[120px] pb-12 px-4 bg-white dark:bg-white min-h-screen">
+    <section className="pt-[120px] pb-16 px-4 bg-white dark:bg-white">
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div>
-          <h1 className="text-4xl font-bold text-[var(--dark-theme)] dark:text-[var(--dark-theme)] mb-4">
+          <h1 className="text-4xl font-bold text-[var(--dark-blue)] dark:text-[var(--dark-blue)] mb-4">
             Welcome to Our Digital World!
           </h1>
           {/* <p className="text-lg text-black dark:text-black mb-6">
@@ -21,7 +23,7 @@ const IntroPage = () => {
 
           <Link
             to="/about"
-            className="inline-block bg-[var(--dark-theme)] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[var(--hover-color)] hover:shadow-lg transition-all duration-300"
+            className="inline-block bg-[var(--dark-blue)] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[var(--hover-color)] hover:shadow-lg transition-all duration-300"
           >
             Explore Services
           </Link>

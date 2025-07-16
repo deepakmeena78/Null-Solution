@@ -36,7 +36,7 @@ function HeaderPage() {
           <img
             src="/Images/logo_design.png"
             alt="Logo"
-            className="w-[140px] h-10 object-contain"
+            className="w-[130px] h-12 m-0 object-contain"
           />
         </Link>
 
@@ -44,47 +44,49 @@ function HeaderPage() {
         <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
           <Link
             to="/"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--dark-blue)] hover:text-white hover:shadow"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--dark-blue)] hover:text-white hover:shadow"
           >
             About Us
           </Link>
 
-          {/* Category with hover dropdown */}
           <div className="relative group">
-            <span className="text-black px-4 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow">
-              Services
+            <span className="text-black px-4 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-[var(--dark-blue)] hover:text-white hover:shadow">
+              <Link
+                to="/service"
+                className="text-black hover:text-white transition"
+              >
+                Services
+              </Link>
             </span>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-theme)] border border-[var(--light-theme)] rounded-xl shadow-xl z-50 w-52 overflow-hidden">
-              <Link
-                to="/service/CRM"
-                className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] hover:border-l-4 border-[var(--dark-theme)] transition"
-              >
-                CRM
-              </Link>
-              <Link
-                to="/service/Design"
-                className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] hover:border-l-4 border-[var(--dark-theme)] transition"
-              >
-                Design
-              </Link>
-              <Link
-                to="/service/Development"
-                className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] hover:border-l-4 border-[var(--dark-theme)] transition"
-              >
-                Development
-              </Link>
+            {/* Dropdown on hover */}
+            <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-blue)] border border-[var(--light-theme)] rounded-xl shadow-xl z-50 w-52 overflow-hidden">
+              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
+                P2P Automation
+              </span>
+              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
+                R2R Processing
+              </span>
+              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
+                S2P Management
+              </span>
+              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
+                Audit Support
+              </span>
+              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
+                Customer Support
+              </span>
             </div>
           </div>
 
           <Link
             to="/contact"
-            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--hover-color)] hover:text-white hover:shadow"
+            className="text-black px-4 py-2 rounded-full transition-all duration-300 hover:bg-[var(--dark-blue)] hover:text-white hover:shadow"
           >
             Contact Us
           </Link>
@@ -93,7 +95,7 @@ function HeaderPage() {
         {/* Join Button */}
         <div className="hidden md:block">
           <Link to="/contact">
-            <button className="bg-[var(--hover-color)] hover:bg-[var(--dark-theme)] text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
+            <button className="bg-[var(--dark-blue)] hover:bg-[var(--dark-theme)] text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg transition-all duration-300">
               Join Us
             </button>
           </Link>
@@ -103,7 +105,7 @@ function HeaderPage() {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-2xl text-gray-700 dark:text-white hover:text-[var(--hover-color)] transition"
+            className="text-2xl text-gray-700 dark:text-white hover:text-[var(--dark-blue)] transition"
           >
             {menuOpen ? <HiX /> : <HiMenuAlt3 />}
           </button>
@@ -116,33 +118,33 @@ function HeaderPage() {
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--dark-blue)]"
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--dark-blue)]"
           >
             About Us
           </Link>
           <Link
             to="/service"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--dark-blue)]"
           >
             Services
           </Link>
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--hover-color)]"
+            className="block text-sm font-medium text-gray-700 dark:text-white hover:text-[var(--dark-blue)]"
           >
             Contact Us
           </Link>
           <Link to="/contact">
-            <button className="w-full bg-[var(--hover-color)] hover:bg-[var(--hover-color)] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
+            <button className="w-full bg-[var(--dark-blue)] hover:bg-[var(--dark-blue)] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
               Join Us
             </button>
           </Link>
