@@ -142,7 +142,7 @@ function HeaderPage() {
             Contact Us
           </Link>
           <Link to="/contact">
-            <button className="w-full bg-[var(--hover-color)] hover:bg-pink-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
+            <button className="w-full bg-[var(--hover-color)] hover:bg-[var(--hover-color)] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300">
               Join Us
             </button>
           </Link>
