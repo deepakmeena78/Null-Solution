@@ -10,6 +10,7 @@ const ContactUs = () => {
   const [loading, setLoading] = useState(false);
   const [contactData, setContactData] = useState({
     email: "",
+    subject: "",
     name: "",
     mobile: "",
     message: "",
@@ -28,8 +29,8 @@ const ContactUs = () => {
     e.preventDefault();
     setErrors({});
 
-    const { name, email, mobile, message } = contactData;
-    if (!name || !email || !mobile || !message) {
+    const { name, subject, email, mobile, message } = contactData;
+    if (!name || !subject || !email || !mobile || !message) {
       setErrors({ message: "All fields are required" });
       return;
     }
@@ -48,12 +49,18 @@ const ContactUs = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://server-easy-solution-2.onrender.com/contact/create",
+        "https://null-solution.onrender.com/admin/contact-us",
         contactData
       );
-      if (response.status === 201) {
+      if (response.status === 200) {
         toast.success("Message sent successfully!");
-        setContactData({ email: "", name: "", mobile: "", message: "" });
+        setContactData({
+          email: "",
+          subject: "",
+          name: "",
+          mobile: "",
+          message: "",
+        });
       }
     } catch (error) {
       console.error("Error:", error);
@@ -97,6 +104,14 @@ const ContactUs = () => {
               value={contactData.name}
               onChange={handleInputChange}
               error={errors.name}
+            />
+            <InputField
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={contactData.subject}
+              onChange={handleInputChange}
+              error={errors.subject}
             />
             <InputField
               type="text"
