@@ -23,7 +23,7 @@ const StatsCounter = () => {
         {dummyStats.map((stat, index) => (
           <div
             key={index}
-            className="border border-[var(--dark-theme)] rounded-lg py-6 px-4 shadow hover:shadow-md transition duration-300"
+            className="border border-[var(--dark-blue)] rounded-lg py-6 px-4 shadow hover:shadow-md transition duration-300"
           > 
             <h3 className="text-3xl font-bold text-[var(--dark-theme)]">
               {inView ? <CountUp end={stat.value} duration={2} /> : 0}+
