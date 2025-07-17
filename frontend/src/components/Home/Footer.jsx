@@ -151,7 +151,7 @@ const Footer = () => {
             <Link to="https://wa.me/919680948484" className="text-[#606080] hover:text-[var(--hover-color)]">
               <i className="fab fa-whatsapp"></i>
             </Link>
-            <Link to="https://www.linkedin.com/in/null-solutions" className="text-[#606080] hover:text-[var(--hover-color)]">
+            <Link to="https://www.linkedin.com/company/null-solutions" className="text-[#606080] hover:text-[var(--hover-color)]">
               <i className="fab fa-linkedin-in"></i>
             </Link>
             <Link to="#" className="text-[#606080] hover:text-[var(--hover-color)]">
