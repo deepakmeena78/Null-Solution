@@ -21,7 +21,7 @@ const Footer = () => {
           <h3 className="text-lg text-[var(--dark-theme)] font-semibold mb-4">Contact Us</h3>
           <p className="text-sm text-[#606080] mb-2">
             📧 <span className="font-medium">Email:</span>{" "}
-            <a href="mailto:example@gmail.com" className="hover:text-[var(--hover-color)]">example@gmail.com</a>
+            <a href="inqure@nullsolutions.in" className="hover:text-[var(--hover-color)]">inqure@nullsolutions.in</a>
           </p>
           <p className="text-sm text-[#606080] mb-2">
             📞 <span className="font-medium">Phone:</span>{" "}

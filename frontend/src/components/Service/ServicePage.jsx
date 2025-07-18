@@ -1,89 +1,4 @@
-// import { motion } from "framer-motion";
-// import {
-//   FaSyncAlt,
-//   FaFileInvoiceDollar,
-//   FaTasks,
-//   FaSearchDollar,
-//   FaHeadset,
-//   FaRobot,
-// } from "react-icons/fa";
-
-// const services = [
-//   {
-//     icon: <FaSyncAlt className="text-4xl text-white" />,
-//     title: "P2P Automation",
-//     description:
-//       "Procure-to-Pay (P2P) automation streamlines the entire purchasing lifecycle—from requisition to vendor payment. It eliminates manual bottlenecks and reduces errors. Our system ensures timely approvals, transparent tracking, and integration with your ERP. Gain full control over spend visibility, vendor management, and invoice reconciliation.",
-//   },
-//   {
-//     icon: <FaFileInvoiceDollar className="text-4xl text-white" />,
-//     title: "R2R Processing",
-//     description:
-//       "Record-to-Report (R2R) ensures financial accuracy and faster closing cycles. Our service automates journal entries, reconciliations, and reporting workflows. We enable you to meet compliance (GAAP/IFRS) with clear audit trails. It allows real-time insights for strategic financial planning and decision-making.",
-//   },
-//   {
-//     icon: <FaTasks className="text-4xl text-white" />,
-//     title: "S2P Management",
-//     description:
-//       "Source-to-Pay (S2P) covers sourcing, procurement, contracting, and payment in one streamlined flow. Our platform automates supplier evaluation, RFPs, and invoice tracking. You can reduce procurement cycle time and ensure spend control. We enable compliance, better vendor performance, and centralized procurement analytics.",
-//   },
-//   {
-//     icon: <FaSearchDollar className="text-4xl text-white" />,
-//     title: "Audit Support",
-//     description:
-//       "Our audit support prepares your organization for any internal or external audit. We organize documentation, validate controls, and ensure accuracy in financial reporting. With mock audits and detailed reporting, you’ll face audits with confidence. Stay compliant with minimal disruption and full traceability.",
-//   },
-//   {
-//     icon: <FaHeadset className="text-4xl text-white" />,
-//     title: "Customer Support",
-//     description:
-//       "We help you deliver 24/7 customer service with multi-channel support systems. Whether via chat, email, or phone, our solutions boost response speed and satisfaction. Integrated CRM tracking ensures smooth case resolution. Our setup improves engagement, retention, and brand loyalty through smart automation.",
-//   },
-//   {
-//     icon: <FaRobot className="text-4xl text-white" />,
-//     title: "AI Workflow Automation",
-//     description:
-//       "Automate repetitive workflows like data entry, lead routing, and document scanning with AI bots. Our low-code tools integrate with apps like Slack, Google Sheets, and CRM platforms. Bots reduce operational costs and free up human time. Real-time dashboards help you monitor automation performance easily.",
-//   },
-// ];
-
-// const ServiceVerticalCards = () => {
-//   return (
-//     <section className="py-20 px-4 bg-gray-100 font-sans">
-//       <div className="max-w-6xl mx-auto space-y-10">
-//         <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
-//           Our Services
-//         </h2>
-
-//         {services.map((service, index) => (
-//           <motion.div
-//             key={index}
-//             initial={{ opacity: 0, y: 50 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6, delay: index * 0.1 }}
-//             viewport={{ once: true }}
-//             className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-gradient-to-r from-teal-500 to-gray-900 shadow-xl text-white"
-//           >
-//             <div className="min-w-[60px]">{service.icon}</div>
-//             <div>
-//               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-//               <p className="text-sm leading-relaxed text-gray-100 text-justify">
-//                 {service.description}
-//               </p>
-//             </div>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ServiceVerticalCards;
-
-
-
-
-
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaSyncAlt,
@@ -92,78 +7,150 @@ import {
   FaSearchDollar,
   FaHeadset,
   FaRobot,
+  FaShieldAlt,
+  FaChartLine,
+  FaUserShield,
+  FaChartBar,
+  FaTruck,
+  FaUserTie,
+  FaUserCheck,
+  FaMoneyCheckAlt,
+  FaHandshake,
 } from "react-icons/fa";
 
 const services = [
   {
+    icon: <FaChartLine className="text-4xl text-white" />,
+    title: "Financial Planning & Analysis (FP&A)",
+    description: `FP&A services empower businesses to forecast, budget, and strategize effectively. 
+We analyze financial trends, monitor performance metrics, and create predictive models. 
+Our team delivers detailed variance reports and scenario planning to support decision-making. 
+You gain full visibility into revenue, costs, and profitability. 
+We help optimize capital allocation and align finance with business goals.`,
+  },
+  {
+    icon: <FaChartBar className="text-4xl text-white" />,
+    title: "Data & Analytics",
+    description: `Unlock business value through actionable insights using advanced analytics. 
+Our services cover data warehousing, BI dashboards, predictive modeling, and reporting. 
+We help you identify trends, detect anomalies, and drive smarter decisions. 
+We also assist in building custom KPIs tailored to your business objectives. 
+Whether operational or strategic, we make your data work for you.`,
+  },
+  {
+    icon: <FaShieldAlt className="text-4xl text-white" />,
+    title: "Risk & Compliance",
+    description: `We help mitigate operational, financial, and regulatory risks across your organization. 
+Our compliance framework covers audits, controls, documentation, and monitoring. 
+Stay updated with changing regulations like GDPR, SOX, and industry-specific laws. 
+We also assess cyber and data risks to strengthen internal governance. 
+Build trust with stakeholders through our structured risk management approach.`,
+  },
+  {
+    icon: <FaHandshake className="text-4xl text-white" />,
+    title: "Sales & Commercials",
+    description: `Drive revenue growth with structured sales operations and commercial strategies. 
+We optimize pricing models, customer segmentation, and lead conversions. 
+Contract lifecycle management, margin analysis, and sales forecasting are part of our suite. 
+We enable better collaboration between sales and finance. 
+Boost profitability and reduce cycle time in deal closures.`,
+  },
+  {
+    icon: <FaTruck className="text-4xl text-white" />,
+    title: "Supply Chain Management",
+    description: `End-to-end visibility and automation in sourcing, warehousing, and logistics. 
+We manage supplier performance, optimize inventory, and streamline transportation. 
+Using real-time dashboards, you track orders and mitigate disruptions. 
+We reduce operational costs while ensuring faster deliveries. 
+Build a supply chain that is resilient and future-ready.`,
+  },
+  {
+    icon: <FaUserTie className="text-4xl text-white" />,
+    title: "HR & Payroll Management",
+    description: `Automate employee onboarding, benefits, payroll, and compliance. 
+We support ESS portals, leave management, performance appraisals, and more. 
+Our payroll engine ensures accurate, timely, and tax-compliant salary processing. 
+Gain insights into workforce costs, retention, and talent optimization. 
+Simplify HR workflows and enhance employee satisfaction.`,
+  },
+  {
+    icon: <FaUserShield className="text-4xl text-white" />,
+    title: "Trust & Safety",
+    description: `Build safer platforms through proactive monitoring, moderation, and response systems. 
+We handle policy enforcement, content filtering, and incident reporting. 
+Our risk engines detect fraud, abuse, and policy violations early. 
+We balance user experience with platform security. 
+Protect your brand while ensuring user trust and compliance.`,
+  },
+  {
+    icon: <FaMoneyCheckAlt className="text-4xl text-white" />,
+    title: "Cash to Pay",
+    description: `Manage end-to-end cash disbursement—from invoice validation to vendor payment. 
+We offer real-time dashboards for cash flow visibility and control. 
+Our system automates approvals, reconciliations, and reporting. 
+Avoid duplicate payments and ensure regulatory compliance. 
+Improve liquidity and strengthen supplier relationships.`,
+  },
+  {
     icon: <FaSyncAlt className="text-4xl text-white" />,
-    title: "P2P Automation",
-    description: `Procure-to-Pay (P2P) automation streamlines your entire purchasing lifecycle—from requisition to vendor payment. 
-It eliminates manual errors, speeds up invoice processing, and ensures vendor compliance. 
-Our system supports dynamic approval workflows, integrated purchase orders, and seamless ERP synchronization. 
-You gain real-time spend visibility, cost savings, and greater control over procurement decisions. 
-Automated three-way matching ensures accurate payments and eliminates fraud risks. 
-Vendor portals make collaboration easier with self-service access to payment updates. 
-Experience faster procurement cycles, reduced bottlenecks, and improved supplier relationships.`,
+    title: "Procure-to-Pay (P2P) Automation",
+    description: `P2P automation eliminates manual errors in the purchase-to-payment cycle. 
+It supports smart workflows, automated PO generation, and invoice matching. 
+Reduce cycle times, ensure vendor compliance, and enhance visibility. 
+Vendor portals improve collaboration and reduce support queries. 
+Gain better spend control and audit-readiness across procurement.`,
   },
   {
     icon: <FaFileInvoiceDollar className="text-4xl text-white" />,
-    title: "R2R Processing",
-    description: `Record-to-Report (R2R) enhances your financial reporting with accuracy and speed. 
-Our automation handles journal entries, account reconciliations, and consolidation processes smoothly. 
-We ensure compliance with standards like GAAP and IFRS, providing audit-ready documentation at every stage. 
-Built-in validations minimize human error and create consistent reporting. 
-You can monitor key financial KPIs via real-time dashboards and insights. 
-Multi-entity support allows easy roll-up reporting across regions and divisions. 
-Let us reduce your month-end workload and boost decision-making accuracy.`,
+    title: "Record-to-Report (R2R) Processing",
+    description: `Streamline journal entries, reconciliations, and statutory reporting. 
+Ensure GAAP/IFRS compliance and improve audit readiness. 
+Our service reduces close cycles and increases data accuracy. 
+Get real-time dashboards for financial performance tracking. 
+Improve visibility and confidence in your financial statements.`,
   },
   {
     icon: <FaTasks className="text-4xl text-white" />,
-    title: "S2P Management",
-    description: `Source-to-Pay (S2P) brings your entire procurement process under one digital umbrella. 
-It begins with intelligent sourcing—automating supplier selection, RFP management, and bid comparison. 
-Once suppliers are chosen, contracts and purchasing workflows are auto-managed to avoid delays. 
-We provide real-time tracking of purchase orders, invoices, and payments. 
-Spend analysis dashboards help you identify savings opportunities. 
-Built-in policy compliance ensures you never overspend or violate internal rules. 
-Achieve a resilient, transparent, and agile procurement environment with ease.`,
+    title: "Source-to-Pay (S2P) Management",
+    description: `Manage sourcing, contracts, procurement, and payments on one platform. 
+Automated bidding and supplier scoring help choose the right vendors. 
+Spend analytics and compliance tools enhance control and savings. 
+Digitize approvals, manage risks, and reduce maverick spend. 
+Ensure seamless integration with ERPs and accounting systems.`,
   },
   {
     icon: <FaSearchDollar className="text-4xl text-white" />,
     title: "Audit Support",
-    description: `Our audit support service prepares your organization to face both internal and external audits confidently. 
-We collect, organize, and verify documentation required by auditors to reduce back-and-forth and save time. 
-Mock audits help you identify compliance gaps before the actual audit begins. 
-We create detailed audit trails and traceable workflows across financial and operational areas. 
-From statutory compliance to internal controls testing, we cover all grounds. 
-We also assist with auditor queries and documentation during fieldwork. 
-Our service helps reduce audit risks and ensures smoother audit outcomes.`,
+    description: `Prepare for internal and external audits with full documentation support. 
+We create audit trails, organize records, and run mock audits. 
+Support includes financial, process, and IT audit readiness. 
+Reduce back-and-forth with auditors through structured workflows. 
+Stay compliant and pass audits with confidence.`,
   },
   {
     icon: <FaHeadset className="text-4xl text-white" />,
     title: "Customer Support",
-    description: `Delivering 24/7 customer support has never been easier. 
-We implement AI-enhanced helpdesks that combine live agents, chatbots, and ticketing systems. 
-Multi-channel communication (phone, chat, email, WhatsApp) ensures convenience for your users. 
-Integrated CRM gives your agents full context of user history for faster resolutions. 
-Self-service options reduce wait times and free up agents for critical issues. 
-Performance analytics help you monitor ticket volume, agent productivity, and satisfaction rates. 
-Enhance your support experience, customer loyalty, and operational efficiency with us.`,
+    description: `Deliver 24/7 support through chat, voice, and email with AI helpdesks. 
+Live agents and chatbots handle tickets via integrated CRMs. 
+We offer multichannel escalation, SLA tracking, and resolution dashboards. 
+Analytics improve agent productivity and customer satisfaction. 
+Build a responsive, user-focused support system.`,
   },
   {
     icon: <FaRobot className="text-4xl text-white" />,
     title: "AI Workflow Automation",
-    description: `Eliminate repetitive tasks using intelligent bots that operate across your apps and systems. 
-AI Workflow Automation automates processes like data entry, approvals, task routing, and document scanning. 
-Our bots work with tools like Slack, Gmail, Google Sheets, and CRMs without human intervention. 
-Built-in logic and conditional workflows allow complex decision-making in real-time. 
-Dashboards track automation performance, delays, and success rates to ensure transparency. 
-Drag-and-drop builders make customizing workflows easy for non-technical users. 
-Save hours of manual effort every week and let your team focus on strategy.`,
+    description: `Replace repetitive tasks with intelligent bots and decision engines. 
+Automate data entry, email routing, approvals, and reporting. 
+Works across tools like Slack, Gmail, Sheets, and CRMs. 
+Customize workflows with drag-and-drop simplicity. 
+Gain time, accuracy, and focus for high-value work.`,
   },
 ];
 
 const ServiceVerticalCards = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleServices = showAll ? services : services.slice(0, 4);
+
   return (
     <section className="py-20 px-4 bg-gray-100 font-sans">
       <div className="max-w-6xl mx-auto space-y-10">
@@ -171,27 +158,40 @@ const ServiceVerticalCards = () => {
           Our Services
         </h2>
 
-        {services.map((service, index) => (
+        {visibleServices.map((service, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-gradient-to-r from-teal-500 to-gray-900 shadow-xl text-white"
           >
             <div className="min-w-[60px]">{service.icon}</div>
             <div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm leading-relaxed text-gray-100 whitespace-pre-line text-justify">
+              <p className="text-sm leading-relaxed text-gray-100 text-justify whitespace-pre-line">
                 {service.description}
               </p>
             </div>
           </motion.div>
         ))}
+
+        <div className="flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="mt-4 px-6 py-2 bg-teal-600 text-white font-medium rounded-md hover:bg-teal-700 transition"
+          >
+            {showAll ? "Show Less" : "Show More"}
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default ServiceVerticalCards;
+
+
+
+

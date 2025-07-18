@@ -1,6 +1,6 @@
 import { IoLocationOutline, IoCallOutline } from "react-icons/io5";
 import { IoIosSend } from "react-icons/io";
-import { MdOutlineChat } from "react-icons/md";
+import { MdOutlineMail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useState } from "react";
 import axios from "axios";
@@ -82,14 +82,14 @@ const ContactUs = () => {
           <InfoCard
             Icon={IoCallOutline}
             title="Call us"
-            content="+919680948484"
+            content="+91 96809-48484"
           />
           <InfoCard
             Icon={FaWhatsapp}
             title="Chat to us"
-            content="info@example.com"
+            content="+91 96809 48484"
           />
-          <InfoCard Icon={MdOutlineChat} title="Fax" content="+919680948484" />
+          <InfoCard Icon={MdOutlineMail} title="Mail" content="inqure@nullsolutions.in" />
         </div>
 
         <div className="lg:col-span-2 bg-gray-100 dark:bg-[var(--light-grey)] rounded-lg p-6">

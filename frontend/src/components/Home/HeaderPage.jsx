@@ -2,6 +2,22 @@ import { useEffect, useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+import {
+  FaChartLine,
+  FaChartPie,
+  FaShieldAlt,
+  FaHandshake,
+  FaTruckMoving,
+  FaUserTie,
+  FaUserShield,
+  FaMoneyCheckAlt,
+  FaSyncAlt,
+  FaFileInvoiceDollar,
+  FaTasks,
+  FaSearchDollar,
+  FaHeadset,
+} from "react-icons/fa";
+
 function HeaderPage() {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -65,22 +81,37 @@ function HeaderPage() {
               </Link>
             </span>
             {/* Dropdown on hover */}
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-blue)] border border-[var(--light-theme)] rounded-xl shadow-xl z-50 w-52 overflow-hidden">
-              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
-                P2P Automation
-              </span>
-              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
-                R2R Processing
-              </span>
-              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
-                S2P Management
-              </span>
-              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
-                Audit Support
-              </span>
-              <span className="px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#1e293b] border-l-4 border-transparent hover:border-[var(--dark-theme)] transition">
-                Customer Support
-              </span>
+            <div className="absolute top-full left-0 mt-3 hidden group-hover:flex flex-col bg-white dark:bg-[var(--dark-blue)] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl z-50 w-[520px] p-4 transition-all duration-300 scale-95 group-hover:scale-100 origin-top">
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  {
+                    icon: <FaChartLine />,
+                    title: "FP&A (Financial Planning & Analysis)",
+                  },
+                  { icon: <FaChartPie />, title: "Data & Analytics" },
+                  { icon: <FaShieldAlt />, title: "Risk & Compliance" },
+                  { icon: <FaHandshake />, title: "Sales & Commercials" },
+                  { icon: <FaTruckMoving />, title: "Supply Chain Management" },
+                  { icon: <FaUserTie />, title: "HR & Payroll Management" },
+                  { icon: <FaUserShield />, title: "Trust & Safety" },
+                  { icon: <FaMoneyCheckAlt />, title: "Cash to Pay" },
+                  { icon: <FaSyncAlt />, title: "P2P Automation" },
+                  { icon: <FaFileInvoiceDollar />, title: "R2R Processing" },
+                  { icon: <FaTasks />, title: "S2P Management" },
+                  { icon: <FaSearchDollar />, title: "Audit Support" },
+                  { icon: <FaHeadset />, title: "Customer Support" },
+                ].map((item, index) => (
+                  <span
+                    key={index}
+                    className="flex items-center gap-3 px-4 py-2 text-sm font-semibold text-gray-800 dark:text-white bg-white dark:bg-transparent rounded-xl hover:bg-gray-100 dark:hover:bg-slate-700 border border-transparent hover:border-teal-500 transition-all duration-200 cursor-pointer"
+                  >
+                    <span className="text-teal-600 dark:text-teal-400 text-lg">
+                      {item.icon}
+                    </span>
+                    <span className="leading-tight">{item.title}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -155,4 +186,3 @@ function HeaderPage() {
 }
 
 export default HeaderPage;
-
