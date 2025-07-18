@@ -27,6 +27,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import LogoLoader from "./components/Home/LogoLoader";
 import { Toaster } from "react-hot-toast";
+import ScrollToTop from "./components/Home/ScrollToTop";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Toaster />
       <HeaderPage />
       <main className="pt-[100px] min-h-screen bg-white dark:bg-[var(--light-theme)] transition-all">
