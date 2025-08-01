@@ -4,7 +4,7 @@ const TermsPage = () => {
   return (
     <div className="bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 shadow-lg rounded-2xl p-8 md:p-10 space-y-6">
       <h2 className="text-2xl font-bold flex items-center gap-2">
-        <FaGavel className="text-pink-600 text-xl" /> Terms & Conditions
+        <FaGavel className="text-[var(--dark-blue)] text-xl" /> Terms & Conditions
       </h2>
 
       <p className="leading-relaxed text-gray-700 dark:text-gray-200">

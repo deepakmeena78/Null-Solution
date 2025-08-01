@@ -14,22 +14,50 @@ const AboutPage = () => {
           </p>
         </div>
 
-        {/* Company Overview Section */}
-        <div className="bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 shadow-lg rounded-2xl p-8 md:p-10 space-y-6">
-          <h2 className="text-2xl font-bold flex items-center gap-2">
-            <FaLightbulb className="text-[var(--hover-color)] text-xl" /> Company Overview
-          </h2>
-          <p className="leading-relaxed text-gray-700 dark:text-gray-200">
-            About Null Solutions Your Intelligent Outsourcing Partner At Null
-            Solutions, we redefine business process outsourcing by blending
-            skilled expertise with cutting-edge technologies like automation and
-            generative AI. We specialize in transforming back-office and support
-            operations across core areas such as Procure-to-Pay (P2P),
-            Record-to-Report (R2R), Source-to-Pay (S2P), Audit Support, and
-            Customer Support. Our mission is simple: empower businesses to focus
-            on growth while we streamline their operations with efficiency,
-            accuracy, and scalability at the core.
-          </p>
+         <div className="flex flex-col md:flex-row items-center bg-gradient-to-r from-white to-pink-50 dark:from-[var(--dark-theme)] dark:to-gray-900 shadow-2xl rounded-3xl overflow-hidden p-6 md:p-10 gap-10 group transition-all duration-500">
+          {/* Image Section */}
+          <div className="md:w-1/2 w-full transform hover:scale-105 transition-transform duration-300">
+            <img
+              src="/Images/about.gif" // replace with real image path
+              alt="Null Solutions Overview"
+              className="w-full h-full rounded-xl shadow-lg object-cover"
+            />
+          </div>
+
+          {/* Content Section */}
+          <div className="md:w-1/2 w-full space-y-6">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white flex items-center gap-3">
+              <FaLightbulb className="text-[var(--hover-color)] text-2xl animate-pulse" />
+              Company Overview
+            </h2>
+            <p className="text-[17px] leading-relaxed text-gray-700 dark:text-gray-300">
+              <span className="font-semibold text-[var(--hover-color)]">
+                Null Solutions
+              </span>{" "}
+              has proudly completed <strong>4 successful years</strong> of
+              delivering intelligent outsourcing services with innovation and
+              integrity.
+              <br />
+              <br />
+              We redefine business process outsourcing by combining skilled
+              expertise with advanced technologies like automation and
+              generative AI.
+              <br />
+              <br />
+              Our core focus areas include <strong>P2P</strong>{" "}
+              (Procure-to-Pay), <strong>R2R</strong> (Record-to-Report),
+              <strong> S2P</strong> (Source-to-Pay),{" "}
+              <strong>Audit Support</strong>, and{" "}
+              <strong>Customer Support</strong>. In addition, we also offer
+              expert solutions in <strong>Finance & Accounting</strong>,{" "}
+              <strong>Data Management</strong>, and{" "}
+              <strong>IT Helpdesk Services</strong>.
+              <br />
+              <br />
+              Our mission is to help businesses grow by streamlining operations
+              with <em>efficiency, accuracy, and scalability</em> at the core.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
